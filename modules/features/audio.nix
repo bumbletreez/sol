@@ -33,7 +33,6 @@
       winePackages.yabridge
       odin2
       dexed
-      vital
     ];
 
     security.rtkit.enable = true;
