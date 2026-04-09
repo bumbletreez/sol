@@ -1,5 +1,5 @@
 mouse-scroll-multiplier = 0.2
 
-background-opacity = 0.5
-
+background-opacity = 0.8
+background-opacity-cells = true
 theme = noctalia

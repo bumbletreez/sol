@@ -22,6 +22,7 @@
       ytmusic
       hjem
       gaming
+      nix
     ];
     environment.systemPackages = with pkgs; [
       kdePackages.ark
