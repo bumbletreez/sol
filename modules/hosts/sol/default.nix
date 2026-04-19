@@ -9,6 +9,7 @@
       base
       greeter
       cassie
+      dualboot
     ];
 
 
