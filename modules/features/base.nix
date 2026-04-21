@@ -3,19 +3,16 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.base = {
-    pkgs,
-    ...
-  }: {
-    imports = with self.nixosModules; [
+  flake.modules.nixos.base = {pkgs, ...}: {
+    imports = with self.modules.nixos; [
       desktop
+      dsp
       nh
       nvf
       cachix
       ghostty
       browser
       keyboard
-      audio
       discord
       flatpak
       grayjay

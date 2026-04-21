@@ -1,17 +1,3 @@
-{
-  inputs,
-  self,
-  ...
-}: {
-  flake.nixosConfigurations.sol = inputs.nixpkgs.lib.nixosSystem {
-    modules = with self.nixosModules; [
-      solConfig
-      base
-      greeter
-      cassie
-      dualboot
-    ];
-
-
-  };
+{inputs, ...}: {
+  flake.nixosConfigurations = inputs.self.lib.mkNixos "x86_64-linux" "sol";
 }

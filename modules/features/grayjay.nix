@@ -3,13 +3,9 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.grayjay = {
-    pkgs,
-    ...
-  }: {
+  flake.modules.nixos.grayjay = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       grayjay
     ];
   };
-    
 }

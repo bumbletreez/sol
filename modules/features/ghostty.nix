@@ -3,10 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.ghostty = {
-    pkgs,
-    ...
-  }: {
+  flake.modules.nixos.ghostty = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       ghostty
     ];
@@ -18,7 +15,5 @@
         };
       };
     };
-
   };
 }
-

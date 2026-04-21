@@ -1,10 +1,17 @@
 {
   self,
   inputs,
-  ... 
+  ...
 }: {
-  flake.nixosModules.noctalia = {
+  flake-file.inputs = {
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+  flake.modules.nixos.noctalia = {
     pkgs,
+    lib,
     ...
   }: {
     environment.systemPackages = with pkgs; [

@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.git = { pkgs, ...}: {
+  flake.modules.nixos.git = {pkgs, ...}: {
     hjem.users.cassie.rum.programs.git = {
       enable = true;
       settings = {

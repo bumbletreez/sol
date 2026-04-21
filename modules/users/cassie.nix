@@ -3,14 +3,14 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.cassie = { pkgs, ... }: {
-    imports = with self.nixosModules; [
+  flake.modules.nixos.cassie = {pkgs, ...}: {
+    imports = with self.modules.nixos; [
       git
     ];
     users.users.cassie = {
       isNormalUser = true;
       description = "cassie";
-      extraGroups = [ "networkmanager" "wheel" "audio"];
+      extraGroups = ["networkmanager" "wheel" "audio"];
       packages = with pkgs; [
       ];
     };

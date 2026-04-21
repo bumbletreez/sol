@@ -3,10 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.discord = {
-    pkgs,
-    ...
-  }: {
+  flake.modules.nixos.discord = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       vesktop
     ];

@@ -3,13 +3,7 @@
   self,
   ...
 }: {
-  flake.nixosModules.gaming = {
-    pkgs,
-    ...
-  }: {
-    imports = [
-    ];
-    
+  flake.modules.nixos.gaming = {pkgs, ...}: {
     hardware.graphics.enable = true;
 
     programs.steam = {
@@ -19,6 +13,8 @@
         proton-ge-bin
       ];
     };
-
+    environment.systemPackages = with pkgs; [
+      protonup-qt
+    ];
   };
 }

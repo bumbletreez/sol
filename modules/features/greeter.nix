@@ -3,12 +3,9 @@
   self,
   ...
 }: {
-  flake.nixosModules.greeter = {
-    config,
-    ...
-  }: {
+  flake.modules.nixos.greeter = {config, ...}: {
     imports = [
-      self.nixosModules.cursors
+      self.modules.nixos.cursors
     ];
 
     programs.regreet = {

@@ -3,10 +3,10 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.desktop = {
-    imports = [
-      self.nixosModules.niri
-      self.nixosModules.noctalia
+  flake.modules.nixos.desktop = {
+    imports = with self.modules.nixos; [
+      niri
+      noctalia
     ];
 
     programs.thunar.enable = true;

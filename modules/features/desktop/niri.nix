@@ -3,10 +3,10 @@
   self,
   ...
 }: {
-  flake.nixosModules.niri = {
-    pkgs,
-    ...
-  }: {
+  flake-file.inputs = {
+    niri-nix.url = "git+https://codeberg.org/BANanaD3V/niri-nix";
+  };
+  flake.modules.nixos.niri = {pkgs, ...}: {
     imports = [
       inputs.niri-nix.nixosModules.default
     ];
@@ -23,9 +23,9 @@
       enable = true;
     };
 
-    nixpkgs.overlays = [ inputs.niri-nix.overlays.niri-nix ];
+    nixpkgs.overlays = [inputs.niri-nix.overlays.niri-nix];
     programs.niri.package = pkgs.niri-unstable;
-    
+
     nix.settings = {
       substituters = [
         "https://niri-nix.cachix.org"

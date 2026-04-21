@@ -3,7 +3,7 @@
   input,
   ...
 }: {
-  flake.nixosModules.dualboot = {
+  flake.modules.nixos.dualboot = {
     boot.loader = {
       efi.canTouchEfiVariables = true;
 
@@ -11,18 +11,16 @@
         enable = true;
 
         windows = {
-          "windows" =
-            let
+          "windows" = let
             # To determine the name of the windows boot drive, boot into edk2 first, then run
             # `map -c` to get drive aliases, and try out running `FS1:`, then `ls EFI` to check
             # which alias corresponds to which EFI partition.
-              boot-drive = "FS1";
-            in
-            {
-              title = "Windows";
-              efiDeviceHandle = boot-drive;
-              sortKey = "y_windows";
-            };
+            boot-drive = "HD1c65535a1";
+          in {
+            title = "Windows";
+            efiDeviceHandle = boot-drive;
+            sortKey = "y_windows";
+          };
         };
 
         edk2-uefi-shell.enable = true;

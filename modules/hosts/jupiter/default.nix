@@ -1,14 +1,3 @@
-{
-  inputs,
-  self,
-  ...
-}: {
-  flake.nixosConfigurations.jupiter = inputs.nixpkgs.lib.nixosSystem {
-    modules = with self.nixosModules; [
-      jupiterConfig
-      base
-      steamdeck
-      cassie
-    ];
-  };
+{inputs, ...}: {
+  flake.nixosConfigurations = inputs.self.lib.mkNixos "x86_64-linux" "jupiter";
 }

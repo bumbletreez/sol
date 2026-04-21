@@ -3,10 +3,7 @@
   self,
   ...
 }: {
-  flake.nixosModules.keyboard = {
-    pkgs,
-    ...
-  }: {
+  flake.modules.nixos.keyboard = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       vial
       qmk-udev-rules

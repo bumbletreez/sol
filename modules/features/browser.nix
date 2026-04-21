@@ -3,10 +3,7 @@
   self,
   ...
 }: {
-  flake.nixosModules.browser = {
-    pkgs,
-    ...
-  }: {
+  flake.modules.nixos.browser = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       chromium
     ];

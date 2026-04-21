@@ -3,13 +3,13 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.cachix = {
-  nix = {
-    settings = {
-      substituters = [
-        "https://nix-community.cachix.org"
-      ];
+  flake.modules.nixos.cachix = {
+    nix = {
+      settings = {
+        substituters = [
+          "https://nix-community.cachix.org"
+        ];
+      };
     };
   };
-};
 }

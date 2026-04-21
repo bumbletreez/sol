@@ -3,13 +3,10 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.cursors = {
-    pkgs,
-    ...
-  }: {
+  flake.modules.nixos.cursors = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       catppuccin-cursors
     ];
-    xdg.icons.fallbackCursorThemes = [ "catppuccin-cursors" ];
+    xdg.icons.fallbackCursorThemes = ["catppuccin-cursors"];
   };
 }
