@@ -12,6 +12,13 @@
       url = "github:snugnug/hjem-rum";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hjem-impure = {
+      url = "github:Rexcrazy804/hjem-impure";
+      # these are only required for internal tests,
+      # hence you can set em to nothing
+      inputs.nixpkgs.follows = "";
+      inputs.hjem.follows = "";
+    };
   };
 
   flake.modules.nixos.hjem = {
@@ -22,6 +29,7 @@
     hjem = {
       extraModules = [
         inputs.hjem-rum.hjemModules.default
+        inputs.hjem-impure.hjemModules.default
       ];
       clobberByDefault = true;
     };

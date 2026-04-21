@@ -19,6 +19,7 @@
         enable = true;
         directory = "/home/cassie";
         user = "cassie";
+        impure.enable = true;
       };
     };
   };

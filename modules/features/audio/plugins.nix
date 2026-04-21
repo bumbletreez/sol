@@ -20,6 +20,7 @@
       surge-xt
       cardinal
       neural-amp-modeler-lv2
+      openutau
     ];
   };
 }

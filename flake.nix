@@ -1,12 +1,19 @@
 # DO-NOT-EDIT. This file was auto-generated using github:vic/flake-file.
 # Use `nix run .#write-flake` to regenerate it.
 {
-  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
     flake-file.url = "github:vic/flake-file";
     flake-parts.url = "github:hercules-ci/flake-parts";
     hjem.follows = "hjem-rum/hjem";
+    hjem-impure = {
+      url = "github:Rexcrazy804/hjem-impure";
+      inputs = {
+        hjem.follows = "";
+        nixpkgs.follows = "";
+      };
+    };
     hjem-rum = {
       url = "github:snugnug/hjem-rum";
       inputs.nixpkgs.follows = "nixpkgs";
