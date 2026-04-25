@@ -8,6 +8,8 @@
       niri
       noctalia
       icons
+      cursors
+      gtk
     ];
   };
 }

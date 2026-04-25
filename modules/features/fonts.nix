@@ -9,5 +9,9 @@
       atkinson-hyperlegible-mono
       noto-fonts-color-emoji
     ];
+
+    hjem.users.cassie.rum.misc.gtk.settings = {
+      font-name = "atkinson hyperlegible next";
+    };
   };
 }
