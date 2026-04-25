@@ -21,17 +21,17 @@
         autoStart = true;
         desktopSession = "niri";
         user = "cassie";
-        updater.splash = true;
+        updater.splash = "jovian";
       };
       devices.steamdeck = {
         enable = true;
         autoUpdate = true;
-        has.amd.gpu = true;
         enableVendorDrivers = true;
       };
-      services.udev.packages = [
-        pkgs.jupiter-hw-support
-      ];
+      hardware.has.amd.gpu = true;
     };
+    services.udev.packages = [
+      pkgs.jupiter-hw-support
+    ];
   };
 }

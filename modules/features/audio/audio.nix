@@ -19,8 +19,6 @@
     musnix = {
       enable = true;
       rtcqs.enable = true;
-      kernel.packages = lib.mkDefault pkgs.linuxPackages_latest;
-      kernel.realtime = true;
       rtirq = {
         enable = true;
       };

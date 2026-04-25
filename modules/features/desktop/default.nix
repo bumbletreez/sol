@@ -7,9 +7,7 @@
     imports = with self.modules.nixos; [
       niri
       noctalia
+      icons
     ];
-
-    programs.thunar.enable = true;
-    programs.xfconf.enable = true;
   };
 }

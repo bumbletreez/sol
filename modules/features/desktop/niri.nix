@@ -23,6 +23,14 @@
       enable = true;
     };
 
+    security.polkit.enable = true;
+    services.gnome.gnome-keyring.enable = true;
+    security.pam.services.swaylock = {};
+
+    xdg.portal.config.niri = {
+      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
+    };
+
     nixpkgs.overlays = [inputs.niri-nix.overlays.niri-nix];
     programs.niri.package = pkgs.niri-unstable;
 

@@ -1,4 +1,4 @@
-mouse-scroll-multiplier = 0.2
+mouse-scroll-multiplier = 1
 
 background-opacity = 0.8
 background-opacity-cells = true

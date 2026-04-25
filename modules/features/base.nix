@@ -15,11 +15,12 @@
       keyboard
       discord
       flatpak
-      grayjay
+      #grayjay
       ytmusic
       hjem
       gaming
       nix
+      disks
     ];
     environment.systemPackages = with pkgs; [
       kdePackages.ark
