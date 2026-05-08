@@ -27,8 +27,19 @@
     services.gnome.gnome-keyring.enable = true;
     security.pam.services.swaylock = {};
 
-    xdg.portal.config.niri = {
-      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
+    xdg.portal = {
+      enable = true;
+      config.niri = {
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
+      };
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gnome
+      ];
+      config.niri = {
+        default = [
+          "gnome"
+        ];
+      };
     };
 
     nixpkgs.overlays = [inputs.niri-nix.overlays.niri-nix];
