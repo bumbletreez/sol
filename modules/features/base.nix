@@ -21,6 +21,8 @@
       gaming
       nix
       disks
+      fonts
+      colors
     ];
     environment.systemPackages = with pkgs; [
       kdePackages.ark

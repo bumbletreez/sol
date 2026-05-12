@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.modules.nixos.fonts = {}: {pkgs, ...}: {
+  flake.modules.nixos.fonts = {pkgs, ...}: {
     fonts.packages = with pkgs; [
       atkinson-hyperlegible-next
       atkinson-hyperlegible-mono

@@ -38,6 +38,30 @@
         alsa.support32Bit = true;
         pulse.enable = true;
         jack.enable = true;
+        wireplumber.enable = true;
+        extraConfig.pipewire = {
+          adjust-sample-rate = {
+            "context.properties" = {
+              "default.clock.allowed-rates" = [
+                44100
+                48000
+                88200
+                96000
+                176400
+                192000
+              ];
+              "default.clock.rate" = 192000;
+            };
+          };
+          noresample = {
+            "context.properties" = {
+              "defauT.clock.allowed-rates" = [
+                44100 48000 96000 192000
+              ];
+              "default.clock.rate" = 192000;
+            };
+          };
+        };
       };
     };
   };

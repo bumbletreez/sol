@@ -4,18 +4,11 @@
   ...
 }: {
   flake.modules.nixos.greeter = {config, ...}: {
-    imports = [
-      self.modules.nixos.cursors
-    ];
-
-    programs.regreet = {
+    services.displayManager.ly = {
       enable = true;
-      theme.name = "catppucin";
-      font = {
-        name = "Atkinson Hyperlegible Next";
-        size = 16;
+      settings = {
+        animation = "matrix";        
       };
-      cursorTheme.name = "catppuccin-cursors";
     };
   };
 }
