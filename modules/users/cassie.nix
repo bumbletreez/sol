@@ -10,7 +10,7 @@
     users.users.cassie = {
       isNormalUser = true;
       description = "cassie";
-      extraGroups = ["networkmanager" "wheel" "audio"];
+      extraGroups = ["networkmanager" "wheel" "audio" "realtime"];
       packages = with pkgs; [
       ];
     };

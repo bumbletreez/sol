@@ -21,6 +21,8 @@
 
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
+    boot.loader.systemd-boot.memtest86.enable = true;
+
     hardware.bluetooth.enable = true;
 
     # Bootloader.

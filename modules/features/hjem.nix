@@ -21,7 +21,7 @@
     };
   };
 
-  flake.modules.nixos.hjem = {
+  flake.modules.nixos.hjem = { pkgs, ... }: {
     imports = [
       inputs.hjem.nixosModules.default
     ];
@@ -32,6 +32,7 @@
         inputs.hjem-impure.hjemModules.default
       ];
       clobberByDefault = true;
+      linker = inputs.hjem.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
     };
   };
 }

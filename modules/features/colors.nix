@@ -11,7 +11,7 @@
       "45475a"
       "585b70"
       "cdd6f4"
-      "3te0dc"
+      "f5e0dc"
       "b4befe"
       "f38ba8"
       "fab387"
@@ -19,7 +19,7 @@
       "a6e3a1"
       "94e2d5"
       "89b4fa"
-      "cba6fj"
+      "cba6f7"
       "f2cdcd"
     ];
   };

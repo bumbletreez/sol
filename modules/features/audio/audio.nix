@@ -26,6 +26,7 @@
 
     environment.systemPackages = with pkgs; [
       ffmpeg-full
+      pwvucontrol
     ];
 
     security.rtkit.enable = true;
