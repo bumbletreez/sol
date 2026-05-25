@@ -4,9 +4,6 @@
   ...
 }: {
   flake.modules.nixos.bottles = {
-    imports = [
-      self.modules.nixos.flatpak
-    ];
 
     services.flatpak.packages = [
       {

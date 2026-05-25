@@ -4,8 +4,11 @@
   ...
 }: {
   flake.modules.nixos.grayjay = {pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      grayjay
+    services.flatpak.packages = [
+      {
+        appId = "app.grayjay.Grayjay";
+        origin = "flathub";
+      }
     ];
   };
 }

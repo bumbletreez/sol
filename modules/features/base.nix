@@ -15,7 +15,7 @@
       keyboard
       discord
       flatpak
-      #grayjay
+      grayjay
       ytmusic
       hjem
       gaming
