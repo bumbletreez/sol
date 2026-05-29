@@ -14,9 +14,6 @@
     lib,
     ...
   }: {
-    imports = with self.modules.nixos; [
-      valent
-    ];
     environment.systemPackages = with pkgs; [
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
