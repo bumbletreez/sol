@@ -21,11 +21,8 @@
 
     programs.niri = {
       enable = true;
-      withUWSM = true;
     };
 
-    security.polkit.enable = true;
-    services.gnome.gnome-keyring.enable = true;
     security.pam.services.swaylock = {};
 
     nixpkgs.overlays = [inputs.niri-nix.overlays.niri-nix];

@@ -5,7 +5,7 @@
 }: {
   flake.modules.nixos.greeter = {config, ...}: {
     services.displayManager.ly = {
-      enable = true;
+      enable = false;
       settings = {
         animation = "matrix";        
       };

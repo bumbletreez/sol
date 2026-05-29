@@ -265,6 +265,10 @@ layout {
     }
 }
 
+environment {
+    SSH_AUTH_SOCK "/run/user/1000/gcr/ssh"
+}
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.

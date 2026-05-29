@@ -23,6 +23,7 @@
       disks
       fonts
       colors
+      cli
     ];
     environment.systemPackages = with pkgs; [
       kdePackages.ark
