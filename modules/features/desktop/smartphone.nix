@@ -3,7 +3,7 @@
   self,
   ...
 }: {
-  flake.modules.nixos.valent = { pkgs, ... }: {
+  flake.modules.nixos.smartphone = { pkgs, ... }: {
     programs.kdeconnect = {
       enable = true;
     };

@@ -6,24 +6,13 @@
   flake.modules.nixos.base = {pkgs, ...}: {
     imports = with self.modules.nixos; [
       desktop
+      audio
       dsp
-      nh
-      nvf
-      cachix
-      ghostty
-      browser
+      programs
       keyboard
-      discord
-      flatpak
-      grayjay
-      ytmusic
-      hjem
       gaming
-      nix
-      disks
-      fonts
-      colors
       cli
+      utilities
     ];
     environment.systemPackages = with pkgs; [
       kdePackages.ark
