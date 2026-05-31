@@ -12,6 +12,7 @@
       hjem
       nh
       nix
+      xremap
     ];
   };
 }
