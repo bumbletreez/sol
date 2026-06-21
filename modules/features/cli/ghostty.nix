@@ -8,12 +8,5 @@
       ghostty
     ];
 
-    hjem = {
-      users.cassie = {
-        files = {
-          ".config/ghostty/config.ghostty".source = ./config.ghostty;
-        };
-      };
-    };
   };
 }

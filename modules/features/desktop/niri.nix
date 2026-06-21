@@ -11,14 +11,6 @@
       inputs.niri-nix.nixosModules.default
     ];
 
-    hjem = {
-      users.cassie = {
-        files = {
-          ".config/niri/config.kdl".source = ./config.kdl;
-        };
-      };
-    };
-
     programs.niri = {
       enable = true;
     };

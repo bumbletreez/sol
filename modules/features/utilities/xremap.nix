@@ -9,12 +9,12 @@
 
   flake.modules.nixos.xremap = { pkgs, ... }: {
     imports = [
-      inputs.xremap-flake.nixosModules.default
+      inputs.xremap.nixosModules.default
     ];
     services.xremap = {
       enable = true;
       package = pkgs.xremap;
-      username = "cassie";
+      userName = "cassie";
       withNiri = true;
       serviceMode = "user";
       deviceNames = [ "Razer Tartarus Pro Keyboard" ];
@@ -24,6 +24,11 @@
             remap:
               LeftShift: LeftCtrl
               CapsLock: LeftShift
+              1: Esc
+              2: "1"
+              3: "2"
+              4: "3"
+              5: "4"
       '';
     };
   };

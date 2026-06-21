@@ -30,8 +30,11 @@
 
     };
 
+
     environment.systemPackages = with pkgs; [
       protonup-qt
+      sgdboop
+      steam-tui
     ];
   };
 }

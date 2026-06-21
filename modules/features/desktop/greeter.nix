@@ -4,11 +4,6 @@
   ...
 }: {
   flake.modules.nixos.greeter = {config, ...}: {
-    services.displayManager.ly = {
-      enable = false;
-      settings = {
-        animation = "matrix";        
-      };
-    };
+    services.displayManager.cosmic-greeter.enable = true;
   };
 }

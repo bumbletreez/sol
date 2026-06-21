@@ -3,24 +3,21 @@
   self,
   ...
 }: {
+  flake-file.inputs = {
+    catppuccin.url = "github:catppuccin/nix";
+  };
+
   flake.modules.nixos.colors = {
-    console.colors = [
-      "1e1e2e"
-      "181825"
-      "313244"
-      "45475a"
-      "585b70"
-      "cdd6f4"
-      "f5e0dc"
-      "b4befe"
-      "f38ba8"
-      "fab387"
-      "f9e2af"
-      "a6e3a1"
-      "94e2d5"
-      "89b4fa"
-      "cba6f7"
-      "f2cdcd"
+    imports = [
+      inputs.catppuccin.nixosModules.catppuccin
     ];
+    
+    catppuccin = {
+      enable = true;
+      accent = "lavender";
+      autoEnable = true;
+      flavor = "mocha";
+    };
+
   };
 }

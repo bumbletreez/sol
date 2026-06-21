@@ -48,18 +48,16 @@
                 48000
                 88200
                 96000
-                176400
-                192000
               ];
-              "default.clock.rate" = 192000;
+              "default.clock.rate" = 96000;
             };
           };
           noresample = {
             "context.properties" = {
               "defauT.clock.allowed-rates" = [
-                44100 48000 96000 192000
+                44100 48000 96000 
               ];
-              "default.clock.rate" = 192000;
+              "default.clock.rate" = 96000;
             };
           };
         };

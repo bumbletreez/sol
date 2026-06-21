@@ -16,6 +16,7 @@
     ];
     environment.systemPackages = with pkgs; [
       kdePackages.ark
+      musescore
     ];
     system.systemBuilderCommands = "ln -s ${self.sourceInfo.outPath} $out/src";
   };
