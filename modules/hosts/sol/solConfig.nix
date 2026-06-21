@@ -9,6 +9,7 @@
   flake.modules.nixos.sol = {
     config,
     pkgs,
+    lib,
     ...
   }: {
     imports = with self.modules.nixos; [
@@ -19,7 +20,7 @@
       dualboot
     ];
 
-    boot.kernelPackages = pkgs.linuxPackages_latest;
+    boot.kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
 
     boot.loader.systemd-boot.memtest86.enable = true;
 

@@ -18,9 +18,14 @@
 
     musnix = {
       enable = true;
+      kernel.realtime = true;
       rtcqs.enable = true;
+      alsaSeq.enable = false;
       rtirq = {
+        resetAll = 1;
+        prioLow = 0;
         enable = true;
+        nameList = "rtc0 snd";
       };
     };
 
