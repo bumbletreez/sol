@@ -21,13 +21,7 @@
         proton-ge-bin
       ];
       
-      package = pkgs.steam.override {
-        extraPkgs =
-          pkgs: with pkgs; [
-            catppuccin-cursors.mochaDark
-          ];
-      };
-
+      package = pkgs.millennium-steam;
     };
 
 

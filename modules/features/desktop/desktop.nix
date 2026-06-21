@@ -10,7 +10,6 @@
       icons
       cursors
       gtk
-      greeter
       smartphone
       fonts
       colors
