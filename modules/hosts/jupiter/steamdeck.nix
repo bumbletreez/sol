@@ -10,10 +10,13 @@
     };
   };
 
-  flake.modules.nixos.steamdeck = {pkgs, ...}: {
+  flake.modules.nixos.steamdeck = {pkgs, lib, ...}: {
     imports = [
       inputs.jovian-nixos.nixosModules.default
+      self.modules.nixos.audio
     ];
+
+    musnix.kernel.packages = pkgs.linuxPackages_jovian;
 
     jovian = {
       steam = {

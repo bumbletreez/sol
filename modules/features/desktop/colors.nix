@@ -17,6 +17,7 @@
       accent = "lavender";
       autoEnable = true;
       flavor = "mocha";
+      cache.enable = true;
     };
 
   };
