@@ -4,7 +4,7 @@
   ...
 }: {
   flake.modules.nixos.cursors = {pkgs, ...}: {
-    xdg.icons.fallbackCursorThemes = ["catppuccin-mocha-dark-cursors"];
+    xdg.icons.fallbackCursorThemes = ["catppuccin-cursors-mocha-dark"];
     users.users.cassie.packages = [
       pkgs.catppuccin-cursors.mochaDark
     ];
