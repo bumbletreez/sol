@@ -26,12 +26,18 @@
         user = "cassie";
         updater.splash = "jovian";
       };
+      
       devices.steamdeck = {
         enable = true;
         autoUpdate = true;
         enableVendorDrivers = true;
       };
+
       hardware.has.amd.gpu = true;
+
+      decky-loader = {
+        enable = true;
+      };
     };
     services.udev.packages = [
       pkgs.jupiter-hw-support
