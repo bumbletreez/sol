@@ -22,6 +22,9 @@
       ];
       
       package = pkgs.millennium-steam;
+      extraPackages = with pkgs; [
+        catppuccin-cursors.mochaDark
+      ];
     };
 
 

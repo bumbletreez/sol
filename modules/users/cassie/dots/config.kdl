@@ -276,6 +276,7 @@ environment {
 
 spawn-at-startup "noctalia"
 spawn-at-startup "steam" "-silent"
+spawn-at-startup "vesktop"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

@@ -13,6 +13,7 @@
       gaming
       cli
       utilities
+      system
     ];
     environment.systemPackages = with pkgs; [
       kdePackages.ark

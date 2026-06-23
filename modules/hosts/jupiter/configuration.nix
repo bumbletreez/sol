@@ -16,6 +16,7 @@ flake.modules.nixos.jupiter =
       steamdeck
       cassie
       base
+      batteries
     ];
 
   # Bootloader.
